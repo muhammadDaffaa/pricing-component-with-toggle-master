@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.font {
+  font-weight: 700;
+}
+body {
+  font: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.header h1 {
+  padding: 20px 0;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding: 1em; */
+  margin-top: 20px;
+}
+
+.toggle span,
+label {
+  margin-right: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.card {
+  background: hsl(240, 78%, 98%);
+  max-width: 380px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: -1px 1px 12px 0 #616161;
+  /* margin-right: 0px; */
+}
+.card-head p {
+  padding-top: 20px;
+  color: hsl(233, 13%, 49%);
+}
+.card-content {
+  width: 300px;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  /* padding: 20px; */
+  margin: 0 auto;
+}
+.card-content h1 {
+  font-size: 50px;
+}
+.card-content p {
+  color: hsl(233, 13%, 49%);
+  padding: 20px;
+}
+.pad-border {
+  padding: 35px 30px;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.card-button {
+  padding: 30px;
+}
+button {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0px;
+  color: hsl(240, 78%, 98%);
+  cursor: pointer;
+
+  letter-spacing: 0.2em;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+button:hover {
+  color: black;
+  background: hsl(240, 78%, 98%);
+  border: 1px solid black;
+}
+
+button:nth-child(2):hover {
+  color: hsl(240, 78%, 98%);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: 1px solid black;
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card:nth-child(2) {
+  margin-left: 18px;
+  transform: scale(1.1);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.card:nth-child(2) h1 {
+  color: hsl(240, 78%, 98%);
+}
+.card:nth-child(2) p {
+  color: hsl(240, 78%, 98%);
+}
+.card:nth-child(2) button {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+@media (max-width: 600px) {
+  .group {
+    flex-direction: column;
+  }
+  .card:nth-child(2) {
+    transform: scale(1);
+    margin-left: 0px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
